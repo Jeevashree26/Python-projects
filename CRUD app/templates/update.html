@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <ul>
+                <li class="active"><a href="{{url_for('index')}}">Index</a></li>
+                <li ><a href="{{url_for('display')}}">Display</a></li>
+                <li ><a href="{{url_for('update')}}">Update</a></li>
+                <li ><a href="{{url_for('logout')}}">Logout</a></li>
+                <li ><a href="{{url_for('delete')}}">Delete</a></li>
+            </ul>
+        </div>
+        <div class="container",align="center">
+            <div class="topbar">
+                <h2>Welcome !! you are in Update page!!</h2>
+            </div></br></br>
+            <div class="contentbar">
+                <h1>Fill your details to update</h1><br>
+                <form action="{{url_for('update')}}" method="POST" autocomplete="off">
+                    <div class="msg">{{msg}}</div>
+                    <input type="text" name="username" placeholder="Enter you Username" class="textbox" id="username" required></br></br>
+                    <input type="password" name="password" placeholder="Enter you password" class="textbox" id="password" required></br></br>
+                    <input type="email" name="email" placeholder="Enter you email" class="textbox" id="email" required></br></br>
+                    <input type="submit" class="button" value="update" required>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Account</title>
+</head>
+<body>
+    <h1>Update Account</h1>
+    <form method="POST" action="{{ url_for('update') }}">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <button type="submit">Update</button>
+    </form>
+
+    <p>{{ msg }}</p>
+</body>
+</html> -->

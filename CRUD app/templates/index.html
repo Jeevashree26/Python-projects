@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <ul>
+                <li class="active"><a href="{{url_for('index')}}">Index</a></li>
+                <li ><a href="{{url_for('display')}}">display</a></li>
+                <li ><a href="{{url_for('update')}}">update</a></li>
+                <li ><a href="{{url_for('logout')}}">logout</a></li>
+                <li ><a href="{{url_for('delete')}}">Delete</a></li>
+            </ul>
+        </div>
+        <div class="container",align="center">
+            <div class="topbar">
+                <h2>Welcome !! you are in index page!!</h2>
+            </div></br></br>
+            <div class="contentbar">
+                <div class="msg">{{msg}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <ul>
+                <li class="active"><a href="{{url_for('index')}}">Index</a></li>
+                <li ><a href="{{url_for('display')}}">Display</a></li>
+                <li ><a href="{{url_for('update')}}">Update</a></li>
+                <li ><a href="{{url_for('logout')}}">Logout</a></li>
+                <li ><a href="{{url_for('delete')}}">Delete</a></li>
+            </ul>
+        </div>
+        <div class="container",align="center">
+            <div class="topbar">
+                <h2>Welcome !! you are in Display page!!</h2>
+            </div></br></br>
+            <div class="contentbar">
+                <h1>Your details</h1> <br>
+                <div class="border">
+                    <table class="worddark">
+                        <tr>
+                            <td>username : </td>
+                            <td>{{account[1]}}</td>
+                        </tr>
+                        <tr>
+                            <td>password : </td>
+                            <td>{{account[2]}}</td>
+                        </tr>
+                        <tr>
+                            <td>email : </td>
+                            <td>{{account[3]}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

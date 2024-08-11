@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="registercontent",align="center">
+        <div class="registertop">
+            <h1>Register</h1>
+        </div></br></br>
+
+        <div class="registerbottom">
+            <form action="{{url_for('register')}}" method="post" autocomplete="off">
+                <div class="msg">{{msg}}</div>
+                <input type="text" name="username" placeholder="Enter you username" class="textbox" id="username" required></br></br>
+                <input type="password" name="password" placeholder="Enter you password" class="textbox" id="password" required></br></br>
+                <input type="email" name="email" placeholder="Enter you email" class="textbox" id="email" required></br></br>
+                <input type="submit" class="button" value="Register">
+            </form>
+            <p class="worddark">Already Have an account? <a href="{{url_for('login')}}" class="workdark">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>
